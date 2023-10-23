@@ -1,0 +1,53 @@
+<div *ngIf="tweet" class="tweet-detail-container">
+  <div class="tweet-detail-block">
+      <div class="tweet">
+          <div class="tweet-main">
+            <section class="tweet-left">
+              <img class="user-avatar" [src]="tweet.tweet_user[0].avatar" alt="user avatar">
+            </section>
+            <section class="tweet-right">
+              <div class="tweet-upper-info">
+                <h3>{{ tweet.tweet_user[0].nickname }}</h3>
+                <h4>@{{ tweet.author }}</h4>
+              </div>
+              <div class="tweet-content">
+                <p>{{ tweet.content }}</p>
+              </div>
+            </section>
+          </div>
+          <section class="tweet-interactions">
+            <span>
+              <img src="https://cdn-icons-png.flaticon.com/512/7263/7263949.png" alt="comment">
+              {{ tweet.comments?.length }}
+            </span>
+            <form [formGroup]="createCommentForm" (keyup.enter)="createCommentBtn()">
+              <input type="textarea" placeholder="Commenter..." formControlName="comment">
+            </form>
+            <span>
+              <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" alt="like">
+              {{ tweet.likes }}
+            </span>
+          </section>
+      </div>
+
+        <div class="tweet-comments" *ngFor="let comments of tweet.comments">
+          <div class="tweet-comment">
+            <div class="tweet">
+                <div class="tweet-main">
+                  <section class="tweet-left">
+                  </section>
+                  <section class="tweet-right">
+                    <div class="tweet-upper-info">
+                      <h4>@{{ comments.author }}</h4>
+                    </div>
+                    <div class="tweet-content">
+                      <p>{{ comments.content }}</p>
+                    </div>
+                  </section>
+                </div>
+          </div>
+        </div>
+        </div>
+  </div>
+</div>
+

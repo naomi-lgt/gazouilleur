@@ -1,0 +1,55 @@
+<div class="homepage-container">
+  <aside class="homepage-side">
+    <!-- <div *ngIf="userLoggedIn" class="user-profile">
+    </div> -->
+
+    <div div *ngIf="userLoggedIn" class="user-profile">
+      <div class="profile-upper">
+        <img src="https://pbs.twimg.com/profile_images/1143032401108578305/8IYSjofV_400x400.jpg" alt="User avatar">
+      </div>
+      <div class="profile-info">
+        <h3>Nickname</h3>
+        <h4>@username</h4>
+        <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, repellat autem quaerat corporis reiciendis ad.</p>
+      </div>
+      <div class="profile-misc">
+        <div>
+          <h4>0</h4>
+          <span>Followers</span>
+        </div>
+        <div>
+          <h4>0</h4>
+          <span>Following</span>
+        </div>
+        <div>
+          <h4>0</h4>
+          <span>Likes</span>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!userLoggedIn">
+      <h3>Veuillez vous connecter pour profiter de Gazouilleur.</h3>
+      <app-auth></app-auth>
+    </div>
+  </aside>
+
+  <div class="homepage-main">
+    <div class="tweet-form">
+      Créer un gazouilli 🐦
+      <form [formGroup]="createTweetForm">
+      <input type="textarea" placeholder="Votre gazouilli..." formControlName="tweet">
+
+      <button (click)="createTweetBtn()">Envoyer gazouilli</button>
+      </form>
+    </div>
+
+    <div class="tweet-list-container">
+      <div class="tweet-list">
+        <app-tweet-card *ngFor="let tweet of tweetsArray" [tweet]="tweet"></app-tweet-card>
+      </div>
+    </div>
+  </div>
+
+</div>
+

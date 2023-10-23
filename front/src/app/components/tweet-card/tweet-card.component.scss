@@ -1,0 +1,58 @@
+a {
+  text-decoration: none;
+  color: black;
+};
+
+.tweet {
+  padding: 1rem;
+  border-radius:7px;
+  background: rgb(245, 245, 245);
+  margin-bottom: 1rem;
+
+  .tweet-main {
+    display: flex;
+    .tweet-left {
+      .user-avatar {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+      }
+      padding-right: 1rem;
+    }
+
+    .tweet-content {
+      padding: 0.5rem 0;
+    }
+  }
+
+
+  .tweet-interactions {
+    display: flex;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    // width: 70%;
+    justify-content: space-around;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    input {
+      width: 15rem;
+      height: 2rem;
+      border-radius: 3px;
+      border: none;
+      background: rgb(238, 238, 238);
+      padding: 0.25rem;
+      inline-size: 15rem;
+      overflow-wrap: break-word;
+
+      &:focus-visible {
+        border: none;
+      }
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}

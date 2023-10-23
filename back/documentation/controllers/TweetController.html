@@ -1,0 +1,834 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>back documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">back documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Controllers</li>
+  <li >TweetController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/tweet/tweet.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>tweets</code>
+            </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addComment" >addComment</a>
+                            </li>
+                            <li>
+                                <a href="#create" >create</a>
+                            </li>
+                            <li>
+                                <a href="#findAll" >findAll</a>
+                            </li>
+                            <li>
+                                <a href="#findCommentsInfo" >findCommentsInfo</a>
+                            </li>
+                            <li>
+                                <a href="#findOne" >findOne</a>
+                            </li>
+                            <li>
+                                <a href="#remove" >remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addComment"></a>
+                    <span class="name">
+                        <span ><b>addComment</b></span>
+                        <a href="#addComment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addComment(id: ObjectId, comment: <a href="../classes/CreateCommentDto.html" target="_self">CreateCommentDto</a>, request)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(JwtAuthGuard)<br />@ApiOperation({summary: &#x27;Ajout d&#x27;un commentaire à un tweet&#x27;})<br />@ApiOkResponse({description: &#x27;Le tweet avec cet id a été modifié.&#x27;, type: Tweet})<br />@ApiBadRequestResponse({description: &#x27;Les données ne sont pas correctes.&#x27;, type: BadRequestException})<br />@Post(&#x27;:id/comments&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>comment</td>
+                                    <td>
+                                                <code><a href="../classes/CreateCommentDto.html" target="_self" >CreateCommentDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>request</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="create"></a>
+                    <span class="name">
+                        <span ><b>create</b></span>
+                        <a href="#create"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>create(createTweetDto: <a href="../classes/CreateTweetDto.html" target="_self">CreateTweetDto</a>, request)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(JwtAuthGuard)<br />@ApiOperation({summary: &#x27;Création d&#x27;un tweet en base de données&#x27;})<br />@ApiCreatedResponse({description: &#x27;Tweet créé avec succès.&#x27;, type: Tweet})<br />@ApiBadRequestResponse({description: &#x27;Erreur dans la création du tweet.&#x27;, type: BadRequestException})<br />@Post()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createTweetDto</td>
+                                    <td>
+                                                <code><a href="../classes/CreateTweetDto.html" target="_self" >CreateTweetDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>request</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAll"></a>
+                    <span class="name">
+                        <span ><b>findAll</b></span>
+                        <a href="#findAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findAll()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiOperation({summary: &#x27;Récupération des tweets en base de données.&#x27;})<br />@ApiOkResponse({description: &#x27;La liste des tweets a été récupérée.&#x27;, type: undefined})<br />@ApiBadRequestResponse({description: &#x27;Les données ne sont pas correctes.&#x27;, type: BadRequestException})<br />@Get()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findCommentsInfo"></a>
+                    <span class="name">
+                        <span ><b>findCommentsInfo</b></span>
+                        <a href="#findCommentsInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findCommentsInfo(id: ObjectId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiOperation({summary: &#x27;Récupération des informations des commentaires en base de données.&#x27;})<br />@ApiOkResponse({description: &#x27;La liste des utilisateurs a été récupérée.&#x27;, type: undefined})<br />@ApiBadRequestResponse({description: &#x27;Les données ne sont pas correctes.&#x27;, type: BadRequestException})<br />@Get(&#x27;:id/comments&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOne"></a>
+                    <span class="name">
+                        <span ><b>findOne</b></span>
+                        <a href="#findOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOne(id: ObjectId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiOperation({summary: &#x27;Récupération d&#x27;un tweet avec id en base de données.&#x27;})<br />@ApiOkResponse({description: &#x27;Le tweet avec cet id a été récupérée.&#x27;, type: Tweet})<br />@ApiNotFoundResponse({description: &#x27;Le tweet n&#x27;a pas été trouvé.&#x27;, type: NotFoundException})<br />@Get(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="remove"></a>
+                    <span class="name">
+                        <span ><b>remove</b></span>
+                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>remove(id: ObjectId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(JwtAuthGuard)<br />@ApiOperation({summary: &#x27;Suppression d&#x27;un tweet en base de données.&#x27;})<br />@ApiOkResponse({description: &#x27;Le tweet a bien été supprimé.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Les données ne sont pas correctes.&#x27;, type: BadRequestException})<br />@Delete(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">src/tweet/tweet.controller.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  BadRequestException,
+  NotFoundException,
+  Injectable,
+  PipeTransform,
+  UseGuards,
+  Request,
+} from &#x27;@nestjs/common&#x27;;
+import { TweetService } from &#x27;./tweet.service&#x27;;
+import { CreateTweetDto } from &#x27;./dto/create-tweet.dto&#x27;;
+import { ObjectId, Types } from &#x27;mongoose&#x27;;
+import { ApiBadRequestResponse, ApiCreatedResponse, ApiNotFoundResponse, ApiOkResponse, ApiOperation } from &#x27;@nestjs/swagger&#x27;;
+import { Tweet } from &#x27;./entities/tweet.entity&#x27;;
+import { CreateCommentDto } from &#x27;./dto/create-comment.dto&#x27;;
+import { TweetResponseDto } from &#x27;./dto/tweet.response.dto&#x27;;
+import { JwtAuthGuard } from &#x27;src/core/auth/guards/jwt-auth.guard&#x27;;
+
+@Injectable()
+export class ParseObjectIdPipe implements PipeTransform&lt;any, Types.ObjectId&gt; {
+  transform(value: any): Types.ObjectId {
+    const validObjectId &#x3D; Types.ObjectId.isValid(value);
+
+    if (!validObjectId) {
+      throw new BadRequestException(&#x60;L&#x27;ID n&#x27;est pas de type ObjectId&#x60;);
+    }
+
+    return value;
+  }
+}
+
+@Controller(&#x27;tweets&#x27;)
+export class TweetController {
+  constructor(private readonly tweetService: TweetService) {}
+
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    summary: &quot;Création d&#x27;un tweet en base de données&quot;,
+  })
+  @ApiCreatedResponse({
+    description: &#x27;Tweet créé avec succès.&#x27;,
+    type: Tweet,
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Erreur dans la création du tweet.&#x27;,
+    type: BadRequestException,
+  })
+  @Post()
+  create(@Body() createTweetDto: CreateTweetDto, @Request() request){
+    console.log(request.user.username);
+    console.log(createTweetDto)
+    const tweet &#x3D; {
+      content: createTweetDto.content,
+      author: request.user.username,
+    };
+    console.log(tweet)
+    return this.tweetService.create(tweet);
+  }
+
+  // @ApiOperation({
+  //   summary:
+  //     &quot;Récupération de l&#x27;utilisateur en base de données.&quot;,
+  // })
+  // @ApiOkResponse({
+  //   description: &#x27;Les informations.&#x27;,
+  //   type: Object,
+  // })
+  // @ApiBadRequestResponse({
+  //   description: &#x27;Les données ne sont pas correctes.&#x27;,
+  //   type: BadRequestException,
+  // })
+  // @Get(&#x27;blabla&#x27;)
+  // findUserInfo(@Param(&#x27;blabla&#x27;) @Request() request) {
+  //   if(request?.user) {
+  //     console.log(request.user);
+  //   }
+  //   return this.tweetService.findUserInfo(request);
+  // }
+
+  @ApiOperation({
+    summary:
+      &#x27;Récupération des tweets en base de données.&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;La liste des tweets a été récupérée.&#x27;,
+    type: [TweetResponseDto],
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Les données ne sont pas correctes.&#x27;,
+    type: BadRequestException,
+  })
+  @Get()
+  findAll() {
+    return this.tweetService.findAll();
+  }
+
+  @ApiOperation({
+    summary:
+      &#x27;Récupération des informations des commentaires en base de données.&#x27;,
+  })
+  @ApiOkResponse({
+    description: &#x27;La liste des utilisateurs a été récupérée.&#x27;,
+    type: [TweetResponseDto],
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Les données ne sont pas correctes.&#x27;,
+    type: BadRequestException,
+  })
+  @Get(&#x27;:id/comments&#x27;)
+  findCommentsInfo(@Param(&#x27;id&#x27;, ParseObjectIdPipe) id: ObjectId) {
+    return this.tweetService.findCommentsInfo(id);
+  }
+
+  @ApiOperation({
+    summary: &quot;Récupération d&#x27;un tweet avec id en base de données.&quot;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Le tweet avec cet id a été récupérée.&#x27;,
+    type: Tweet,
+  })
+  @ApiNotFoundResponse({
+    description: &quot;Le tweet n&#x27;a pas été trouvé.&quot;,
+    type: NotFoundException,
+  })
+  @Get(&#x27;:id&#x27;)
+  findOne(@Param(&#x27;id&#x27;, ParseObjectIdPipe) id: ObjectId) {
+    console.log(&#x27;findOne&#x27;)
+    return this.tweetService.findOne(id);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    summary: &quot;Ajout d&#x27;un commentaire à un tweet&quot;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Le tweet avec cet id a été modifié.&#x27;,
+    type: Tweet,
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Les données ne sont pas correctes.&#x27;,
+    type: BadRequestException,
+  })
+  @Post(&#x27;:id/comments&#x27;)
+  addComment(@Param(&#x27;id&#x27;, ParseObjectIdPipe) id: ObjectId, @Body() comment: CreateCommentDto, @Request() request) {
+    console.log(comment)
+    const newComment &#x3D; {
+      author: request.user.username,
+      content: comment.content
+    }
+    return this.tweetService.addComment(id, newComment);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    summary: &quot;Suppression d&#x27;un tweet en base de données.&quot;,
+  })
+  @ApiOkResponse({
+    description: &#x27;Le tweet a bien été supprimé.&#x27;,
+  })
+  @ApiBadRequestResponse({
+    description: &#x27;Les données ne sont pas correctes.&#x27;,
+    type: BadRequestException,
+  })
+  @Delete(&#x27;:id&#x27;)
+  remove(@Param(&#x27;id&#x27;, ParseObjectIdPipe) id: ObjectId) {
+    return this.tweetService.remove(id);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'TweetController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
