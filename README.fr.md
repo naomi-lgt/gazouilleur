@@ -1,13 +1,13 @@
-# :bird: Welcome to the Gazouilleur repository! :iphone:
+# :bird: Bienvenue sur le dépôt de Gazouilleur ! :iphone:
 🚀 Version 0.1 ([English](https://github.com/naomi-lgt/gazouilleur/blob/main/README.md), [Français](https://github.com/naomi-lgt/gazouilleur/blob/main/README.fr.md))
 
 <div align="center">
   <img src="https://emojigraph.org/media/social/bird_1f426.png" alt="gazouilleur-cover" border="0" style="height: 400px">
 </div>
 
-"Gazouilleur" is a social network inspired by X (formerly Twitter), and it is my end-of-training project with Zenika. The homepage allows users to create their own "Gazouillis" and engage with others' content through comments and likes. Additionally, users have the option to comment on existing "Gazouillis". The platform also provides a profile section where users can customize their username, email, and password. It also offers features like the count of likes received and the number of fellow Gazouilleurs followed.
+Gazouilleur est un réseau social inspiré de X (anciennement Twitter), et est mon projet de fin de formation avec Zenika. La page d'accueil permet aux utilisateurs de créer leurs propres "Gazouillis" et d'interagir avec le contenu des autres en laissant des commentaires et des likes. De plus, les utilisateurs ont la possibilité de commenter des "Gazouillis" existants. La plateforme propose également une section de profil où les utilisateurs peuvent personnaliser leur nom d'utilisateur, leur adresse e-mail et leur mot de passe. Elle offre également des fonctionnalités telles que le nombre de likes reçus et le nombre de Gazouilleurs suivis.
 
-### :warning: The project is still in early development :warning:
+### :warning: Le projet est toujours en cours de développement :warning:
 
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -21,7 +21,7 @@
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 
 ## Technologies
-In order to make this project, I used the following technologies (these can change depending on the development):
+Afin de réaliser ce projet, j'ai utilisé les technologies suivantes (qui peuvent changer en suivant le développement):
 
 
 ### Front-end
