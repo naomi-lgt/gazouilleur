@@ -1,4 +1,4 @@
-import { BadRequestException, Controller, Post, Request, UseGuards } from '@nestjs/common';
+import { BadRequestException, Controller, Post, Request, Res, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBadRequestResponse, ApiCreatedResponse, ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 import { AuthService } from './core/auth/auth.service';
@@ -22,7 +22,7 @@ export class AppController {
     type: BadRequestException,
   })
   @Post('auth/login')
-  async login(@Request() req) {
-    return this.authService.login(req.user);
+  async login(@Request() req, @Res({passthrough: true}) response: Response) {
+    return this.authService.login(req.user, response);
   }
 }

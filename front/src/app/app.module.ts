@@ -15,10 +15,12 @@ import { AuthComponent } from './components/auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
+
 @NgModule({
   declarations: [AppComponent, HomePageComponent, HeaderComponent, TweetCardComponent, TweetDetailComponent, LoginComponent, AuthComponent],
   imports: [BrowserModule, CommonModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, BrowserAnimationsModule, MatSnackBarModule],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { catchError, map, of } from 'rxjs';
 import { AuthService } from 'src/app/services/auth-service.service';
 import { SnackbarService } from 'src/app/services/snackbar.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-auth',
@@ -13,8 +14,12 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
 export class AuthComponent {
   registerForm: FormGroup;
   loginForm: FormGroup;
+  isSuccessful = false;
+  isSignUpFailed = false;
+  isLoggedIn = false;
+  isLoginFailed = false;
 
-  constructor(public authService: AuthService, private fb: FormBuilder, private router: Router, private readonly _snackbar: SnackbarService) {
+  constructor(public authService: AuthService, private storageService: StorageService, private fb: FormBuilder, private router: Router, private readonly _snackbar: SnackbarService) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -26,16 +31,29 @@ export class AuthComponent {
     });
   }
 
-  // Méthode qui permet de log l'utilisateur, après inscription ou juste par appui sur bouton login
-  submitData(formValue: any) {
-      return this.authService.login(formValue).pipe(
-        map(data => console.log(data)),
-        catchError(() => {
-          this._snackbar.openSnackBar(`E-mail et / ou mot de passe non trouvé(s)`, 'OK')
-          return of()
-        })
-      ).subscribe(() => this.router.navigate(['']))
+  ngOnInit(): void {
+    if (this.storageService.isLoggedIn()) {
+      this.isLoggedIn = true;
+    }
   }
+
+  submitData(formValue: any) {
+    return this.authService.login(formValue).subscribe({
+      next: data => {
+        console.log(data)
+        this.storageService.saveUser(data);
+
+        this.isLoginFailed = false;
+        this.isLoggedIn = true;
+        window.location.reload();
+      },
+      error: err => {
+        this.isLoginFailed = true;
+        this._snackbar.openSnackBar(`E-mail et / ou mot de passe non trouvé(s)`, 'OK')
+        return of()
+      }
+    })
+}
 
   loginBtn() {
     const form = this.loginForm;
@@ -49,10 +67,13 @@ export class AuthComponent {
     const form = this.registerForm;
     if (form.valid) {
       return this.authService.createUser(form.value).subscribe({
-        next: () => {
+        next: (data) => {
           this._snackbar.openSnackBar('Compte créé ! 🐦', 'OK');
+          this.isSuccessful = true;
+          this.isSignUpFailed = false;
         },
         error: (error) => {
+          this.isSignUpFailed = true;
           switch(error.error.statusCode) {
             case 409:
               this._snackbar.openSnackBar('Un utilisateur a déjà ce nom ❌', 'OK');

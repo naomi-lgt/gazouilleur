@@ -1,7 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, tap, catchError } from 'rxjs';
 import { CreateUserDto, User } from 'src/api';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -11,7 +15,7 @@ export class AuthService {
     constructor(private _httpClient: HttpClient) { }
 
     login(user: Omit<User, 'avatar' | 'nickname'>) {
-        return this._httpClient.post<any>(`http://localhost:8888/auth/login`, user, {withCredentials:true})
+        return this._httpClient.post<any>(`http://localhost:8888/auth/login`, user, httpOptions)
         .pipe(
             tap(data => {
               console.log(data)
@@ -25,11 +29,15 @@ export class AuthService {
     }
 
     createUser(user: CreateUserDto) {
-        return this._httpClient.post<User>(`http://localhost:8888/users`, user).pipe(
+        return this._httpClient.post<User>(`http://localhost:8888/users`, user, httpOptions).pipe(
             catchError(error => {
                 console.error(error);
                 throw error
             })
         )
+    }
+
+    logout() {
+      return this._httpClient.post(`http://localhost:8888/users`, httpOptions)
     }
 }

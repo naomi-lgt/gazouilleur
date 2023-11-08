@@ -31,10 +31,17 @@ export class AuthService {
     } else throw new BadRequestException
   }
 
-  async login(user: any) {
+  async login(user: any, response: any) {
     const payload = { username: user.username };
+
+    const access_token = await this.jwtService.signAsync(payload);
+    response.cookie('jwt', access_token, {httpOnly: true, sameSite: false});
     return {
-      access_token: this.jwtService.sign(payload),
-    };
+      'jwt': access_token
+    }
+  }
+
+  async logout() {
+
   }
 }

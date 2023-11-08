@@ -11,8 +11,8 @@ import { UsersModule } from 'src/users/users.module';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: 'my-secret-key', // Cette valeur doit être caché, (on masquera ça dans une variable d’environnement)
-      signOptions: { expiresIn: '3600s' }, // Durée de vie de notre token JWT
+      secret: 'my-secret-key',
+      signOptions: { expiresIn: '60s' },
     }),
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy],
